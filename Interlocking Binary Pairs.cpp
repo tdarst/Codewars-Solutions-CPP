@@ -10,17 +10,14 @@ Take given numbers and put them through binConvert which returns a vector repres
 length difference is not an issue. Compares the two vectors element to element to see if they both have a one at the same index.
 */
 
-std::vector<int> binConvert(int c){
+std::vector<int> binConvert(unsigned long long c){
   std::vector<int> bin;
-  
-  int i = 0;
   
   if(c == 0){return {0};}
   
   while (c > 0){
     bin.push_back(c % 2);
     c /= 2;
-    i++;
   }
   
   return bin;
